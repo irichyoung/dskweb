@@ -5,7 +5,6 @@
 <head><title>getcatalog</title></head>
 <body>
 	<p><h1><b>This is server's catalog:</b></h1></p>
-	<p>just to test the git</p>
 	<form method = "POST">
 	<input type="text" name="instructor">
 	<input type="submit" value="submit">
@@ -18,11 +17,11 @@
 		Process p = r.exec(s3);
 		BufferedReader br= new BufferedReader(new InputStreamReader(p.getInputStream()));
 		while((s1 = br.readLine())!=null)s2 = s2 + s1 + "\n";
+	%>
+	<p><img src=picture/apple_icon.gif height="30" width="30" alt="folder " style="cursor:pointer"><%=s1%></p> 
+	<%
 	}
 	%>
-	<textarea cols="100" rows="50">
-		<%=s2%>
-	</textarea>
 	<img name="apple_icon" height="20" width="20"  src=picture/apple_icon.gif></img>
 </body>
 </html>
