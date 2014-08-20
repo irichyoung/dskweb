@@ -5,6 +5,7 @@
 <head><title>getcatalog</title></head>
 <body>
 	<p><h1><b>This is server's catalog:</b></h1></p>
+	<p>just to test the git</p>
 	<form method = "POST">
 	<input type="text" name="instructor">
 	<input type="submit" value="submit">
