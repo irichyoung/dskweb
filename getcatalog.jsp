@@ -22,7 +22,7 @@
 	<textarea cols="100" rows="50">
 		<%=s2%>
 	</textarea>
-	<img name="apple_icon" src=picture/apple_icon.gif></img>
+	<img name="apple_icon" height="20" width="20"  src=picture/apple_icon.gif></img>
 </body>
 </html>
 	
