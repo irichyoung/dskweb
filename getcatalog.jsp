@@ -11,18 +11,19 @@
 	</form>	
 	<%
 	String s3 = request.getParameter("instructor");
-	String s2="",s1;
+	String s1,temp;
+	String []s2;
 	Runtime r = Runtime.getRuntime();
 	if(s3!=null){
 		Process p = r.exec(s3);
 		BufferedReader br= new BufferedReader(new InputStreamReader(p.getInputStream()));
-		while((s1 = br.readLine())!=null)s2 = s2 + s1 + "\n";
-	%>
-	<p><img src=picture/apple_icon.gif height="30" width="30" alt="folder " style="cursor:pointer"><%=s1%></p> 
-	<%
+		while(s1 = br.readLine()!=null)temp += s1;
+		s2 = temp.split("\\s+");
+		for(int i=0;i<s2.length();i++){%>
+			<p><img src=picture/apple_icon.gif height="30" width="30" alt="folder " style="cursor:pointer"><%=s2[i]%></p>
+		<%} 
 	}
 	%>
-	<img name="apple_icon" height="20" width="20"  src=picture/apple_icon.gif></img>
 </body>
 </html>
 	
